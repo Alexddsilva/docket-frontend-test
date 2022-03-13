@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css"></link>
+    <script src="./components/documentComponent/documentComponent.js"></script>
+    
+    <title>Document</title>
+  </head>
+  <body  onload="onLoad()">
+   
+    <div class="main_container">
+      <!-- nav --> 
+      <nav>
+        <img class="nav_image" src="./assets/nav.svg" alt="docket nav">
+      </nav>
+      <!-- content -->
+      <main class="content">
+        <h3 class="order_title">Pedido #1</h1>
+          <!-- document description -->
+        <div class="document_description">
+          <div class="document_title_x_status">
+            <h4 class="document_title">Lead: Documento para criar contrato</h4>
+
+            <div class="document_status">
+              <div class="document_status_color"></div>
+              <span class="document_status_text">Em andamento</span>
+            </div>
+
+            
+          </div>
+          <p class="document_text"><strong>Observação: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin commodo faucibus. Nullam ut pharetra turpis. Vestibulum molestie turpis ac tortor dapibus porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam in elit vitae ligula consectetur hendrerit id id odio. Vestibulum volutpat gravida arcu sit amet tempus. In rhoncus leo vel dolor convallis gravida id a nulla.</p>
+
+          <div class="document_description_footer">
+            <p><strong>Criado por: </strong>João da Silva</p>
+            <p><strong>Data de criação: </strong>13 de março de 2022 </p>
+          </div>
+        </div>
+
+        <div class="second_section">
+          
+          <div class="form_container">
+            <div class="form_title_container">
+              <h3 class="form_title">Adicionar documentos ao pedido</h3>
+            </div>
+            <!-- form -->
+            <form onsubmit="onSubmit(event)">
+              <div class="form_body">
+                <!-- fields -->
+                <div class="input_container">
+                  <label for="documentName">
+                    Nome do documento:
+                  </label>
+                  <input id="documentName" class="field_form" type="text" placeholder="Digite aqui"/>
+                </div>
+  
+                <div class="input_container">
+                  <label for="personType">
+                    Tipo de pessoa:
+                  </label>
+                  <select id="personType" class="field_form select_field_form" onchange="changePersonType(event)">
+                    <option>Pessoa física</option>
+                    <option>Pessoa jurídica</option>
+                  </select>
+                </div>
+  
+                <div class="input_container">
+                  <label for="personDocument">
+                    CPF:
+                  </label>
+                  <input id="personDocument" class="field_form" type="text" placeholder="Digite aqui"/>
+                </div>
+
+                <div class="input_container">
+                  <label for="personFullName">
+                    Nome Completo:
+                  </label>
+                  <input id="personFullName" class="field_form" type="text" placeholder="Digite aqui"/>
+                </div>
+
+                <strong class="registry_data">
+                  Dados do cartório
+                </strong>
+
+                <div class="input_container zip_code">
+                  <label for="registryZipCode">
+                    CEP:
+                  </label>
+                  <input id="zipCode" class="field_form" type="text" placeholder="Digite aqui"/>
+                </div>
+
+                <div class="input_row">
+                  <div class="input_container">
+                    <label for="registryStreet">
+                      Rua:
+                    </label>
+                    <input id="registryStreet" class="field_form" type="text" placeholder="Digite aqui"/>
+                  </div>
+
+                  <div class="input_container small_input">
+                    <label for="registryStreetNumber">
+                      Número:
+                    </label>
+                    <input id="registryStreetNumber" class="field_form" type="text" placeholder="Digite aqui"/>
+                  </div>
+                </div>
+
+                <div class="input_row">
+                  <div class="input_container">
+                    <label for="registryCity">
+                      Cidade:
+                    </label>
+                    <input id="registryCity" class="field_form" type="text" placeholder="Digite aqui"/>
+                  </div>
+
+                  <div class="input_container small_input">
+                    <label for="registryUf">
+                      UF:
+                    </label>
+                    <input id="registryUf" class="field_form" type="text" placeholder="Digite aqui"/>
+                  </div>
+                </div>
+                <!-- end of fields -->
+
+                <button class="submit_button">
+                  Criar documento
+                </button>
+              </div>
+            </form>
+
+          </div>
+          <!-- documents -->
+          <div id="document_list" class="document_list">
+            <div class="empty_list">
+                <img class="empty_img" src="./assets/emptyIcon.svg" alt="empty icon" class="icon_empty">
+                <span class="empty_text">Nenhum documento criado</span>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">DOCKET © 2022</footer>
+    </div>
+
+    <!-- javascript -->
+    <script src="./app.js"></script>
+  </body>
+</html>
