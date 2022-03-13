@@ -8,4 +8,8 @@
   - npm start
 </h2>
 
+<h2 align="center">
+  Para executar as requisições desabilite o CORS do navegador.
+</h2>
+
 # Projeto Status: WIP 🚧
