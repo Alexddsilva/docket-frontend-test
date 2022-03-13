@@ -1,9 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700);
-h3 {
-  color: "red";
-  font-size: 45px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -144,8 +139,9 @@ body {
   display: flex;
   width: 100%;
   margin-top: 15px;
-  overflow: scroll;
-  padding-bottom: 15px;
+  margin-bottom: 30px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main_container .content .second_section .form_container {

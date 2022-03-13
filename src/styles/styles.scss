@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700);
 
-@import "../components/documentComponent/styles.scss";
 
 $base_text_color: #2e2d2c;
 $white_color: #ffffff;
@@ -117,7 +116,8 @@ body {
       width: 100%;
       margin-top: 15px;
       margin-bottom: 30px;
-      overflow: scroll;
+      overflow-y: scroll;
+      overflow-x: hidden;
 
       .form_container {
         flex: 4;
